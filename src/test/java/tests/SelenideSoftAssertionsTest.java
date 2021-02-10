@@ -14,17 +14,14 @@ import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.$$;
 
-public class SelenideSoftAssertionsTest
-{
+public class SelenideSoftAssertionsTest {
     @BeforeAll
-    static void setUp()
-    {
+    static void setUp() {
         Configuration.startMaximized = true;
     }
 
     @Test
-    void verificationOfPageOpening()
-    {
+    void verificationOfPageOpening() {
         //Откройте страницу Selenide в Github
         Selenide.open("https://github.com");
         $("[name=q]").setValue("selenide").pressEnter();
